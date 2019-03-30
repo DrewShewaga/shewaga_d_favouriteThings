@@ -6,7 +6,7 @@ var connect = require('../utils/sqlConnect');
 /* GET home page. */
 router.get('/', function(req, res, next) {
   //Do a db query and get some of the hero data
-  connect.query(`SELECT name, avatar FROM hero`, (err, result) => {
+  connect.query(`SELECT name, avatar FROM tbl_rockets`, (err, result) => {
     if (err) {
       throw err;
       console.log(err);
@@ -19,9 +19,9 @@ router.get('/', function(req, res, next) {
 });
 
 //Get idividual data/ bio info
-router.get('/:hero', function(req, res, next) {
+router.get('/:tbl_rockets', function(req, res, next) {
   //Do a db query and get some of the hero data
-  connect.query(`SELECT * FROM hero WHERE name="${req.params.hero}"`, (err, result) => {
+  connect.query(`SELECT * FROM tbl_rockets WHERE name="${req.params.tbl_rockets}"`, (err, result) => {
     if (err) {
       throw err;
       console.log(err);
