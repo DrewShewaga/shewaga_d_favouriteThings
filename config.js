@@ -3,7 +3,7 @@ const config = {
     pword: "",
     host: "localhost",
     port: "3306",
-    database: "marvelcharacters"
+    database: "db_rockets"
 }
 
 module.exports = config;
